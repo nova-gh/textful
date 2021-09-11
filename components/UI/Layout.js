@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="min-h-[700px]">
+    <div className="max-h-screen">
       <Navbar />
       {children}
 
