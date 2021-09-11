@@ -6,7 +6,16 @@ const index = () => {
   const [note, setNote] = useState("");
   // post req to BE
   const saveNote = () => {
-    console.log("Current Note:", note);
+    // console.log("Current Note:", note);
+    fetch("/api/notes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        note,
+      }),
+    });
   };
   return (
     <NotePageLayout>
