@@ -1,6 +1,5 @@
 import "tailwindcss/tailwind.css";
 import Layout from "../components/UI/Layout";
-
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
