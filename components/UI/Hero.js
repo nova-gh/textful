@@ -1,6 +1,7 @@
+import Link from "next/link";
 const Hero = () => {
   return (
-    <div className="min-h-[700px] px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl my-auto sm:mx-auto lg:max-w-2xl">
         <div className="flex flex-col sm:text-center sm:mb-0 ">
           <a href="/" className="mb-6 sm:mx-auto">
@@ -33,12 +34,11 @@ const Hero = () => {
             </p>
           </div>
           <div>
-            <a
-              href="/"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-            >
-              Get started
-            </a>
+            <Link href="/create-note">
+              <a className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                Create a note
+              </a>
+            </Link>
           </div>
         </div>
       </div>
