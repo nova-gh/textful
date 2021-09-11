@@ -1,6 +1,9 @@
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+
 const Layout = ({ children }) => {
   return (
-    <div className="mt-5 lg:mt-10 text-primeLight font-poppins">
+    <div className="min-h-[700px]">
       <Navbar />
       {children}
 
