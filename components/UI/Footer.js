@@ -20,7 +20,6 @@ const Footer = () => {
           <SiLinkedin size="26" className="hover:text-blue-300" />
         </a>
       </footer>
-      <h2>test</h2>
     </>
   );
 };
