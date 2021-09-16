@@ -19,7 +19,7 @@ const slugIndex = ({ noteText, noteSlug }) => {
       </Head>
       <div className="space-y-5 text-center ">
         <h2 className="text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl ">
-          Snippiet + {noteSlug}
+          Snippiet #{noteSlug}
         </h2>
         <button
           href="/"
