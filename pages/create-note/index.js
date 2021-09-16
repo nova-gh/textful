@@ -1,13 +1,15 @@
 import NotePageLayout from "../../components/UI/NotePageLayout";
 import Head from "next/head";
 import { useState } from "react";
-const index = () => {
+import { useRouter } from "next/router";
+const CreateNoteIndex = () => {
+  const router = useRouter();
   // handle form input
   const [note, setNote] = useState("");
   // post req to BE
-  const saveNote = () => {
+  const saveNote = async () => {
     // console.log("Current Note:", note);
-    fetch("/api/notes", {
+    const res = await fetch("/api/notes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,6 +18,11 @@ const index = () => {
         note,
       }),
     });
+    // get the res in json
+    const createdNote = await res.json();
+    // console.log(createdNote);
+    // using router to push to slug page from the response
+    router.push(`/${createdNote.slug}`);
   };
   return (
     <NotePageLayout>
@@ -60,4 +67,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default CreateNoteIndex;
